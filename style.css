@@ -1,0 +1,76 @@
+@font-face {
+  font-family: 'Fiona';
+  src: url('Fiona-Regular.woff2') format('woff2'),
+       url('Fiona-Regular.woff') format('woff');
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Fiona', Arial, sans-serif;
+  background-color: #DFBE99;
+}
+
+header {
+  color: #1B3D4B;
+  text-align: center;
+  padding: 20px 0;
+}
+
+#apps, #academic {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  padding: 20px;
+  gap: 20px;
+}
+
+.app-block, .discipline {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #1B3D4B;
+  color: #DFBE99;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 5px;
+  flex: 0 0 calc(33.333% - 40px);
+}
+
+.app-block img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.discipline h2, .discipline p {
+  margin-bottom: 10px;
+}
+
+.discipline a {
+  display: inline-block;
+  background-color: #006699;
+  color: #FFFFFF;
+  text-decoration: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+}
+
+#loading {
+  text-align: center;
+  padding: 20px;
+  background-color: #1B3D4B;
+  color: #DFBE99;
+}
+
+@media (max-width: 768px) {
+  #apps, #academic {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .app-block, .discipline {
+    width: 100%;
+    margin: 10px auto;
+  }
+}
